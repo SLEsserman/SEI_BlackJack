@@ -1,0 +1,26 @@
+HTML:
+
+A header section to display the game title and possibly a logo
+A section to display the dealer's cards
+A section to display the player's cards
+A section to display the player's current score
+A section to display buttons for actions like hit, stand, double, and deal
+A section to display messages to the player like "You win!" or "Bust!"
+
+
+CSS:
+
+Styles for the header section and each of the card sections
+Styles for the buttons and messages section
+Styles for the card images themselves, which will need to be dynamically updated
+
+
+JS:
+
+Variables to store the deck of cards, the dealer's hand, the player's hand, and the game state
+Functions to shuffle the deck, deal cards to the dealer and player, and calculate the score of a given hand
+Functions to handle player actions like hit and stand, and update the display accordingly
+Functions to handle the dealer's turn, and update the display accordingly
+Functions to determine the winner of the game and display the appropriate message
+Event handlers for the buttons that trigger the player actions
+Event handlers for the deal button to start a new game
