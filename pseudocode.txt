@@ -26,3 +26,82 @@ Create a function to allow the player to hit (draw another card) or stand (keep 
 Implement logic to handle the dealer's turn. The dealer must draw cards until their hand value is 17 or higher.
 Write a function to determine the winner of the game. The winner is the player with the highest hand value without going over 21.
 Display the game results on the screen, including the winner, the player and dealer's hands, and the total value of each hand.
+
+// Define card values
+const CARD_VALUES = {
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6,
+  "7": 7,
+  "8": 8,
+  "9": 9,
+  "10": 10,
+  "J": 10,
+  "Q": 10,
+  "K": 10,
+  "A": 11
+};
+
+// Define deck of cards
+let deck = [];
+
+// Define variables for player and dealer hands
+let playerHand = [];
+let dealerHand = [];
+
+// Define variables for game status and buttons
+let gameStatus = "";
+const hitButton = document.querySelector("#hit-button");
+const standButton = document.querySelector("#stand-button");
+const dealButton = document.querySelector("#deal-button");
+
+// Define functions for creating and shuffling the deck
+function createDeck() {
+  for (let suit of ["Hearts", "Diamonds", "Clubs", "Spades"]) {
+    for (let value in CARD_VALUES) {
+      deck.push({value: value, suit: suit});
+    }
+  }
+}
+
+function shuffleDeck() {
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+}
+
+// Define function for dealing cards
+function dealCards() {
+  playerHand = [deck.pop(), deck.pop()];
+  dealerHand = [deck.pop(), deck.pop()];
+  gameStatus = "Player's turn";
+  showHands();
+  updateGameStatus();
+  hitButton.disabled = false;
+  standButton.disabled = false;
+}
+
+// Define function for showing hands
+function showHands() {
+  showCards(playerHand, "#player-cards");
+  showCards(dealerHand, "#dealer-cards");
+}
+
+// Define function for showing cards
+function showCards(hand, container) {
+  const cards = hand.map(card => `<div class="card">${card.value} of ${card.suit}</div>`);
+  document.querySelector(container).innerHTML = cards.join("");
+}
+
+// Define function for updating game status
+function updateGameStatus() {
+  document.querySelector("#game-status").textContent = gameStatus;
+}
+
+// Define function for player's turn
+function playerTurn() {
+  gameStatus = "Player's turn";
+ 
