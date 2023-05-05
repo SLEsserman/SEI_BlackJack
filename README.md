@@ -61,6 +61,8 @@ ___
 
 ##### Markdown Cheatsheet: [GitHub](https://github.com/SLEsserman/SEI_BlackJack)
 
+##### Trello Checklist: [Trello](https://trello.com/b/Z3dwHWrH/sei-project-one-week-2-3)
+
 ---
 
 
