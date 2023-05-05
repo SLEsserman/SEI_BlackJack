@@ -29,11 +29,8 @@ ___
 
 ### **_Getting Started_**
 
-##### Sign up and sign in as a new user and then walk through the Ranger creation page to begin your warband.
-
-##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
-
-##### The project itself was deployed and can be viewed [here](URL).
+##### I am going to create blackjack as a web-based game. Using HTML, CSS and JavaScript.
+##### I am excited to stretch my abilities in this project, especially having to code up all of the different attributes and data structures. 
 
 ---
 
