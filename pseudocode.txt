@@ -17,10 +17,12 @@ Styles for the card images themselves, which will need to be dynamically updated
 
 JS:
 
-Variables to store the deck of cards, the dealer's hand, the player's hand, and the game state
-Functions to shuffle the deck, deal cards to the dealer and player, and calculate the score of a given hand
-Functions to handle player actions like hit and stand, and update the display accordingly
-Functions to handle the dealer's turn, and update the display accordingly
-Functions to determine the winner of the game and display the appropriate message
-Event handlers for the buttons that trigger the player actions
-Event handlers for the deal button to start a new game
+create an array to hold the deck of cards, with each card represented as an object containing a value and a suit.
+Create a function to shuffle the deck of cards randomly using a Fisher-Yates shuffle algorithm.
+Write a function to deal cards to the player and the dealer. This function should draw two cards for each player, and display them on the screen.
+Create a function to calculate the total value of a player's hand. This function should take into account the values of the cards, with face cards worth 10 and Aces worth 1 or 11.
+Write a function to determine if the player or dealer has Blackjack, which is an Ace and a 10-valued card.
+Create a function to allow the player to hit (draw another card) or stand (keep their current hand) based on user input.
+Implement logic to handle the dealer's turn. The dealer must draw cards until their hand value is 17 or higher.
+Write a function to determine the winner of the game. The winner is the player with the highest hand value without going over 21.
+Display the game results on the screen, including the winner, the player and dealer's hands, and the total value of each hand.
