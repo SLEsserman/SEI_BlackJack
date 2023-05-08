@@ -7,7 +7,10 @@ let yourAceCount = 0
 let hidden;
 let deck = [];
 
-const canHit = true
+var xWins = 0;
+var yWins = 0;
+
+let canHit = true
 
 window.onload = function() {
   buildDeck();
@@ -62,6 +65,7 @@ const startGame = () => {
     }
 
     document.getElementById("hit").addEventListener("click", hit)
+    document.getElementById("stay").addEventListener("click", stay)
 
 }
 
@@ -79,8 +83,38 @@ const hit = () => {
       if(reduceAce(yourSum, yourAceCount) > 21) {
         canHit = false
       }
-
 }
+
+
+const stay = () => {
+  dealerSum = reduceAce(dealerSum, dealerAceCount)
+  yourSum = reduceAce(yourSum, yourAceCount)
+
+  canHit = false
+  document.getElementById("hidden").src = "./cards/" + hidden + ".png"
+
+  let message = ""
+  if (yourSum > 21) {
+    message = "You Lose!";
+  }
+  else if (dealerSum > 21) {
+    message = "You win!";
+  }
+  else if (yourSum == dealerSum) {
+    message = "Tie!";
+  }   
+  else if (yourSum > dealerSum) {
+    message = "You Win!";
+    }
+  else if (yourSum < dealerSum) {
+    message = "You Lose!";
+}
+
+document.getElementById("dealer-sum").innerText = dealerSum;
+document.getElementById("your-sum").innerText = yourSum;
+document.getElementById("results").innerText = message;
+}
+
 
 const getValue = (card) => {
   let data = card.split("-")
@@ -109,3 +143,10 @@ const reduceAce = (playerSum, playerAceCount) => {
   }
   return playerSum
 }
+
+const restart = () => {
+  startGame()
+}
+
+let newGame = document.getElementById("restart")
+newGame.addEventListener("click", restart)
