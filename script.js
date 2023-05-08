@@ -1,8 +1,8 @@
-const dealerSum = 0
-const yourSum = 0
+let dealerSum = 0
+let yourSum = 0
 
-const dealerAceCount = 0
-const yourAceCount = 0 
+let dealerAceCount = 0
+let yourAceCount = 0 
 
 let hidden;
 let deck = [];
@@ -41,13 +41,33 @@ const startGame = () => {
   hidden = deck.pop()
   dealerSum += getValue(hidden)
   dealerAceCount += checkAce(hidden)
+  while (dealerSum < 17) {
+    //image
+    let cardImg = document.createElement("img")
+    let card = deck.pop()
+    cardImg.src = "./cards/" + card + ".png"
+    dealerSum += getValue(card)
+    dealerAceCount += checkAce(card)
+    document.getElementById("dealer-cards").append(cardImg)
+    }
+    console.log(dealerSum)
+
+    for(let iteration = 0; iteration < 2; iteration++) {
+      let cardImg = document.createElement("img")
+      let card = deck.pop()
+      cardImg.src = "./cards/" + card + ".png"
+      yourSum += getValue(card)
+      yourAceCount += checkAce(card)
+      document.getElementById("your-cards").append(cardImg)
+    }
+
 }
 
 const getValue = (card) => {
   let data = card.split("-")
   let value = data[0]
 
-  if(isNotNum(value)) {
+  if(isNaN(value)) {
     if (value == "A") {
       return 11
     }
@@ -56,8 +76,9 @@ const getValue = (card) => {
   return parseInt(value)
 }
 
-const checkAce = () => {
+const checkAce = (card) => {
   if(card[0] == "A") {
     return 1;
   }
+  return 0
 }
