@@ -61,6 +61,25 @@ const startGame = () => {
       document.getElementById("your-cards").append(cardImg)
     }
 
+    document.getElementById("hit").addEventListener("click", hit)
+
+}
+
+const hit = () => {
+  if(!canHit) {
+    return
+  }
+  let cardImg = document.createElement("img")
+      let card = deck.pop()
+      cardImg.src = "./cards/" + card + ".png"
+      yourSum += getValue(card)
+      yourAceCount += checkAce(card)
+      document.getElementById("your-cards").append(cardImg)
+
+      if(reduceAce(yourSum, yourAceCount) > 21) {
+        canHit = false
+      }
+
 }
 
 const getValue = (card) => {
@@ -81,4 +100,12 @@ const checkAce = (card) => {
     return 1;
   }
   return 0
+}
+
+const reduceAce = (playerSum, playerAceCount) => {
+  while (playerSum > 21 && playerAceCount > 0) {
+    playerSum -= 10
+    playerAceCount -= 1
+  }
+  return playerSum
 }
