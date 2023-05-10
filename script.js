@@ -143,10 +143,3 @@ const reduceAce = (playerSum, playerAceCount) => {
   }
   return playerSum
 }
-
-const restart = () => {
-  startGame()
-}
-
-let newGame = document.getElementById("restart")
-newGame.addEventListener("click", restart)
