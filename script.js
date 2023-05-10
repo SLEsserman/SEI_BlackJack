@@ -143,41 +143,28 @@ const reduceAce = (playerSum, playerAceCount) => {
 }
 
 const restart = () => {
-  location.reload()
-  // //remove event listeners
-  // document.getElementById("hit").removeEventListener("click", hit)
-  // document.getElementById("stay").removeEventListener("click", stay)
-  // document.getElementById("restart").removeEventListener("click", restart)
 
+  // restart game variables
+  dealerSum = 0
+  yourSum = 0
+  dealerAceCount = 0
+  yourAceCount = 0 
+  hidden = null
+  canHit = true
+  deck = []
 
-  // // restart game variables
-  // dealerSum = 0
-  // yourSum = 0
-  // dealerAceCount = 0
-  // yourAceCount = 0 
-  // hidden = null
-  // canHit = true
+  //clear the dealer and player sum
+  document.getElementById("dealer-cards").innerHTML = ""
+  document.getElementById("your-cards").innerHTML = ""
 
-  // //clear the dealer and player sum
-  // document.getElementById("dealer-cards").innerHTML = ""
-  // document.getElementById("your-cards").innerHTML = ""
+  buildDeck()
+  shuffleDeck()
 
-  // //deal cards 
-  // hidden = deck.pop()
-  // dealerSum += getValue(hidden)
-  // dealerAceCount += checkAce(hidden)
+  let image = document.createElement("img")
+  image.setAttribute("id", "hidden")
+  image.setAttribute("src", "./cards/BACK.png")
+  document.querySelector("#dealer-cards").append(image)
 
-  // for(let iteration = 0; iteration < 2; iteration++) {
-  //   let cardImg = document.createElement("img")
-  //   let card = deck.pop()
-  //   cardImg.src = "./cards/" + card + ".png"
-  //   yourSum += getValue(card)
-  //   yourAceCount += checkAce(card)
-  //   document.getElementById("your-cards").append(cardImg)
-  // }
-
-  // document.getElementById("hit").addEventListener("click", hit)
-  // document.getElementById("stay").addEventListener("click", stay)
-  // document.getElementById("restart").addEventListener("click", restart)
+  startGame()
 
 }
