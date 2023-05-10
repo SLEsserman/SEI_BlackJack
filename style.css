@@ -50,11 +50,23 @@ body {
   width: 100vw;
 }
 
+h1 {
+  text-shadow: 10px 5px 16px white;
+}
+
+h2 {
+  text-shadow: 10px 5px 16px white;
+}
+
 h1:hover {
   color: red;
 }
 
 p {
   text-shadow: 10px 5px 16px white;
+}
+
+footer {
+  font-size: 50px;
 }
 
