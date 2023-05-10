@@ -1,4 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  background: 
+  url('/Users/samuelesserman/Desktop/sei/projects/SEI_Jeopardy/vecteezy_casino-chips-on-a-green-background-top-view-of-blue-stacks_19848834.jpg') no-repeat center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
@@ -22,6 +34,12 @@ body {
 }
 
 #stay {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#restart {
   width: 100px;
   height: 50px;
   font-size: 20px;
