@@ -168,3 +168,17 @@ const restart = () => {
   startGame()
 
 }
+
+/* REFERENCES
+W3School: https://www.w3schools.com/js/default.asp
+Event listeners: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+HTML DOM appendChild() method: https://www.w3schools.com/js/js_htmldom_methods.asp
+JavaScript if...else statement: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+JavaScript while loop: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+JavaScript parseInt() function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+JavaScript split() method: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+How to Shuffle: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
+Logo made by Anthony Medina
+ */

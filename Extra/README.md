@@ -1,7 +1,7 @@
 # Blackjack - SEI.P1
 
 ## Date
-May 4, 2023
+May 11, 2023
 ***
 
 ### Author
@@ -14,7 +14,8 @@ Samuel Esserman
 
 ### **_Description_**
 
-#### For this first project I will be creating Blackjack. 
+#### For this first project I will be creating Blackjack.
+#### The rules of Blackjack are outlined in the ome page of my website
 
 ___
 
@@ -24,6 +25,8 @@ ___
 - CSS
 - JavaScript
 - Github
+- Stack OverFlow
+- W3School
 
 ---
 
@@ -48,7 +51,7 @@ ___
 
 ### **_Future Updates_**
 
-- [ ] Future Update 1
+- [ ] Future Update 1: Make it be able to give you our odds live
 - [x] ~~Strikethrough~~ Items Also
 
 ---
