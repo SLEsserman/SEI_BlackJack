@@ -52,7 +52,6 @@ ___
 ### **_Future Updates_**
 
 - [ ] Future Update 1: Make it be able to give you our odds live
-- [x] ~~Strikethrough~~ Items Also
 
 ---
 
