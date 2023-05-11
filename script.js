@@ -170,6 +170,8 @@ const restart = () => {
 }
 
 /* REFERENCES
+Article: https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javascript
+
 W3School: https://www.w3schools.com/js/default.asp
 Event listeners: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 HTML DOM appendChild() method: https://www.w3schools.com/js/js_htmldom_methods.asp
@@ -180,5 +182,5 @@ JavaScript split() method: https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 How to Shuffle: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 
-Logo made by Anthony Medina
+Logo made by Anthony Medina!
  */
