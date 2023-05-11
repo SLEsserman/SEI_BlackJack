@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
   buildDeck();
   shuffleDeck();
   startGame();
+  document.getElementById('my_audio').play()
 });
 
 
@@ -24,7 +25,6 @@ const buildDeck = () => {
       for(let value = 0; value < values.length; value++) {
         deck.push(values[value] + "-" + types[iteration])
       }
-      console.log(deck)
     }
 }
 
@@ -35,7 +35,6 @@ const shuffleDeck = () => {
     deck[i] = deck[j];
     deck[j] = temp
   }
-  console.log(deck)
 }
 
 const startGame = () => {
@@ -51,7 +50,6 @@ const startGame = () => {
     dealerAceCount += checkAce(card)
     document.getElementById("dealer-cards").append(cardImg)
     }
-    console.log(dealerSum)
 
     for(let iteration = 0; iteration < 2; iteration++) {
       let cardImg = document.createElement("img")
@@ -157,6 +155,7 @@ const restart = () => {
   //clear the dealer and player sum
   document.getElementById("dealer-cards").innerHTML = ""
   document.getElementById("your-cards").innerHTML = ""
+  document.getElementById("results").innerHTML = ""
 
   buildDeck()
   shuffleDeck()

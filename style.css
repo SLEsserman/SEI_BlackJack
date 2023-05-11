@@ -46,7 +46,7 @@ p {
 
 #intro-index {
   background-color: white;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Blackjack_board.JPG);
+  background-image: url(https://img.freepik.com/free-photo/green-glitter-textured-paper-background_53876-101814.jpg?w=1380&t=st=1683811654~exp=1683812254~hmac=b82985a1b887790f3042de024d5dc11a936e890487f9c295966b1232a251e8cd);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Notable', sans-serif;
@@ -66,11 +66,14 @@ h1:hover {
   color: red;
 }
 
-p {
+#intro-index > p {
   text-shadow: 10px 5px 16px white;
+  color: crimson;
 }
 
 footer {
   font-size: 50px;
+  color: white;
 }
+
 
