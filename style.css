@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+img {
+  height: 300px;
+
+}
+
 body {
   background-color: darkgreen;
   font-family: Arial, Helvetica, sans-serif;
